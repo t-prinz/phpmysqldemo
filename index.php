@@ -65,10 +65,12 @@ if ($conn) {
   echo "Database is not available";
 }
 
+echo "<p><i>";
 $filename = 'index.php';
 if (file_exists($filename)) {
     echo "$filename was last modified: " . date ("F d Y H:i:s.", filemtime($filename));
 }
+echo "</i></p>";
 ?>
  </body>
 </html>
