@@ -13,7 +13,7 @@
   </style>
  </head>
  <body>
- <h1>Hello OpenShift!*!*!*!</h1>
+ <h1>Hello OpenShift!</h1>
 <?php
 error_reporting(E_ERROR);
 
@@ -63,6 +63,11 @@ if ($conn) {
   mysqli_close($conn);
 } else {
   echo "Database is not available";
+}
+
+$filename = 'index.php';
+if (file_exists($filename)) {
+    echo "$filename was last modified: " . date ("F d Y H:i:s.", filemtime($filename));
 }
 ?>
  </body>
